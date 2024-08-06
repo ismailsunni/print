@@ -25,12 +25,15 @@
     "ol": "7 || 8 || 9 || 10"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.24.0",
-    "@babel/preset-typescript": "7.23.3",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.23.3",
     "@openlayers/eslint-plugin": "^4.0.0",
     "@types/jest": "29.5.12",
+    "@types/rbush": "^3.0.3",
     "@typescript-eslint/eslint-plugin": "7.1.0",
     "@typescript-eslint/parser": "7.1.0",
+    "babel-jest": "^29.7.0",
     "canvas": "2.11.2",
     "eslint": "8.57.0",
     "eslint-config-openlayers": "18.0.0",
@@ -45,7 +48,7 @@
     "ol-mapbox-style": "12.2.1",
     "pixelmatch": "^5.3.0",
     "pngjs": "^7.0.0",
-    "ts-jest": "29.1.2",
+    "ts-jest": "^29.2.4",
     "typescript": "5.3.3",
     "vite": "5.1.4"
   }

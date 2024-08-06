@@ -71,14 +71,7 @@ module.exports = {
   // ],
 
   // An array of file extensions your modules use
-  // moduleFileExtensions: [
-  //   "js",
-  //   "jsx",
-  //   "ts",
-  //   "tsx",
-  //   "json",
-  //   "node"
-  // ],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -93,7 +86,7 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  'preset': 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -172,13 +165,13 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  'transform': {
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "/node_modules/",
-  //   "\\.pnp\\.[^\\/]+$"
-  // ],
+  transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
@@ -192,6 +185,6 @@ module.exports = {
   // Whether to use watchman for file crawling
   // watchman: true,
   transformIgnorePatterns: [
-     "node_modules/(?!(ol|pbf|@open-wc|chai-a11y-axe|lit-html|lit-element|node-fetch|fetch-blob|data-uri-to-buffer|formdata-polyfill|color-space|color-rgba|color-parse)/)", // <- exclude the OL lib
+     "node_modules/(?!(ol|pbf|@open-wc|chai-a11y-axe|lit-html|lit-element|node-fetch|fetch-blob|data-uri-to-buffer|formdata-polyfill|color-space|color-rgba|color-parse|rbush|quickselect)/)", // <- exclude the OL lib
   ]
 };
